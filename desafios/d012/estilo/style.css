@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Passion+One&display=swap');
+@font-face {
+    font-family: 'Oswald';
+    src: url('../fonte/Oswald/Oswald-VariableFont_wght.ttf');
+}
 
 @font-face {
     font-family: 'Averia Serif Libre';
@@ -9,7 +12,7 @@
 
 :root {
     --fonte1: Verdana, Geneva, Tahoma, sans-serif;
-    --fonte2: 'Passion One', cursiva;
+    --fonte2: 'Oswald', cursiva;
     --fonte3: 'Averia Serif Libre', cursiva;
 }
 
@@ -62,6 +65,10 @@ section {
     font-size: 3.5vw;
 }
 
+section > p {
+    padding-bottom: 2em;
+}
+
 section.normal {
     background-color: white;
     color: black;
@@ -70,12 +77,25 @@ section.normal {
 section.imagem {
     background-color: rgb(33, 32, 32);
     color: white;
+    box-shadow: inset 6px 6px 13px rgba(0, 0, 0, 0.452);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 section.imagem > p {
     display: inline-block;
     padding: 5px;
-    background-color: rgba(0, 0, 0, 0.272);
+    background-color: rgba(0, 0, 0, 0.573);
+    text-shadow: 1px 1px 0px black;
+}
+
+section#img01 {
+    background-image: url('../imagens/background001.jpg');
+    background-position: right center;
+}
+
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
 }
 
 footer {
